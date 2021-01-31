@@ -1,0 +1,5 @@
+{
+  "test": "1111",
+  "esAddress": "http://0.0.0.0:9200",
+  "thriftAddress": "0.0.0.0:7890"
+}
