@@ -3,5 +3,4 @@
 
 package query_analysis
 
-var GoUnusedProtection__ int;
-
+var GoUnusedProtection__ int

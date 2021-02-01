@@ -9,7 +9,7 @@ import (
 var esClient *es.Client
 
 const (
-	AnalyzerIkSmart = "ik_smart"
+	AnalyzerIkSmart   = "ik_smart"
 	AnalyzerIkMaxWord = "ik_max_word"
 )
 

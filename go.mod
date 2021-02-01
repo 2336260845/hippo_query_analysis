@@ -9,4 +9,4 @@ require (
 	github.com/spf13/viper v1.7.1
 )
 
-replace github.com/apache/thrift/lib/go/thrift => ./go_thrift
+replace github.com/apache/thrift/lib/go/thrift => ./go_thrift  //gomod总是自动拉取最新代码，暂时未找到更好的办法，先替换为本地文件;本地版本为v0.13.0

@@ -9,9 +9,9 @@ import (
 	"hippo_query_analysis/gen-go/query_analysis"
 )
 
-type QueryAnalysisServer struct {}
+type QueryAnalysisServer struct{}
 
-func (qas *QueryAnalysisServer) QueryAnalysis(ctx context.Context, req *query_analysis.QueryParam)  (r []string, err error) {
+func (qas *QueryAnalysisServer) QueryAnalysis(ctx context.Context, req *query_analysis.QueryParam) (r []string, err error) {
 	if req.Query == "" {
 		return []string{}, fmt.Errorf("query is empty")
 	}

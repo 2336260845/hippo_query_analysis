@@ -12,7 +12,7 @@ const (
 
 type Config struct {
 	Test          string `json:"test"`
-	EsAddress     string `json:"es_address"`  //没用
+	EsAddress     string `json:"es_address"` //没用
 	ThriftAddress string `json:"thrift_address"`
 	HasParse      bool   `json:"-"`
 }

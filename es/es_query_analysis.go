@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"hippo_query_analysis/config"
 	"net/http"
 )
 
@@ -30,7 +31,8 @@ func QueryAnalysis(analyzer, query string) ([]string, error) {
 		return []string{}, fmt.Errorf("QueryAnalysis marshal error, err=%+v", err.Error())
 	}
 
-	req, err := http.NewRequest("GET", "/_analyze?pretty=true", bytes.NewReader(jsonBody))
+	address := config.GetConfig().EsAddress
+	req, err := http.NewRequest("GET", fmt.Sprintf("%s/_analyze?pretty=true", address), bytes.NewReader(jsonBody))
 	if err != nil {
 		return []string{}, fmt.Errorf("QueryAnalysis NewRequest error, err=%+v", err.Error())
 	}
